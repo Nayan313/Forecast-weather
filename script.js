@@ -137,7 +137,7 @@ const getCityCoordinates = () => {
       getWeatherDetails(name, lat, lon);
       getAirPollution(name, lat, lon);
 
-      document.querySelector(".city-name-main").innerHTML =
+      document.querySelector(".city-display").innerHTML =
         data[0].name + "," + data[0].country;
     })
     .catch(() => {

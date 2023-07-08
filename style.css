@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-weight: 100;
 }
 
 @font-face {
@@ -31,7 +32,13 @@ button {
 
 .part1-current-weather {
     width: 40%;
-    background-color: cornflowerblue;
+    height: 267px;
+    background: #606c88;
+    overflow: hidden;
+    background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+    background: linear-gradient(to right top, #3f4c6b, #606c88);
+    border-radius: 14px;
+    box-shadow: 0px 87px 78px -39px rgba(0,0,0,0.4);
 }
 
 .part2-current-weather {
@@ -129,12 +136,17 @@ button {
 }
 
 .temp-main {
-    font-size: 15vh;
+    font-size: 14vh;
+    font-weight: 500;
 }
 
 .condition {
     text-transform: capitalize;
-    font-size: 6vh;
+    font-size: 4vh;
+    position: absolute;
+    top: 16vh;
+    left: 9px;
+    font-weight: 100;
 }
 
 .weather-icon {
@@ -145,15 +157,26 @@ button {
 .weather-icon-main{
     width: 200px;
 }
-
+.other-city-details{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+#details-card{
+    width: 94%;
+    margin: 4% 0 3% 0;
+    overflow: hidden;
+    background: rgba(188, 188, 188, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(188, 188, 188, 0.3);
+    border-radius: 10px;
+}
 .high-low-temp {
     display: grid;
     align-items: center;
-    width: 96%;
-    margin: 2%;
-    overflow: hidden;
-    background-color: #0f2557;
-    border-radius: 10px;
+    
     position: relative;
 }
 
@@ -193,14 +216,13 @@ button {
 #arrow-input {
     font-size: 26px;
 }
-
+#main-card-icon{
+    width: 50%;
+    align-items: baseline;
+}
 .other-details-weather {
     display: flex;
-    width: 96%;
-    margin: 0 2%;
-    overflow: hidden;
-    border-radius: 15px;
-    background-color:#0f2557;
+    padding: 16px 0;
 }
 
 .part1-section-other-weather {
@@ -209,7 +231,10 @@ button {
     margin: 0 1%;
     justify-content: space-evenly;
 }
-
+.location-icon{
+    height: 31px;
+    margin: 0 15px;
+}
 #card-name {
     color: #a9a9a9;
     font-size: 20px;
@@ -266,6 +291,14 @@ button {
 }
 
 
+.city-name-main {
+    text-transform: capitalize;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    justify-content: center;
+}
 
 #card {
     width: 250px;
@@ -356,6 +389,10 @@ button {
         width: 100%;
     }
 .part1-current-weather,.part2-current-weather{
+    width: 94%;
+    margin: 3%;
+}
+.part2-current-weather{
     width: 100%;
 }
     .weather-data {
@@ -378,12 +415,6 @@ button {
         width: 16vh;
     }
 
-    .city-name-main {
-        font-size: 35px;
-        width: 39vh;
-        display: flex;
-        justify-content: center;
-    }
 
 
     .part {
@@ -401,7 +432,9 @@ button {
         scroll-snap-type: x mandatory;
         position: relative;
     }
-
+    .details {
+        display: flex;
+    }
     #card {
         flex-shrink: 0;
         scroll-snap-align: start;

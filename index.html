@@ -1,0 +1,239 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forecast  Weather</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1>weather dashboard</h1>
+        <div class="weather-input">
+            <div class="btn-search-1">
+                <input class="city-input" type="text" name="" placeholder="city??" id="">
+                <button class="search-btn"><img src="img/search.png" class="search-icon"></button>
+            </div>
+            <div class="separator"></div>
+            <button class="location-btn">use current location</button>
+        </div>
+    </div>
+    <!-- <img src="img/orb.png" class="back-img"> -->
+    <div class="current-weather">
+        <div class="part1-current-weather">
+
+            <div class="city-saw">
+
+                <h2 class="city-name-main"></h2>
+            </div>
+            <div class="details">
+
+                <div class="icon" id="forecast-card-icon"><img src=""
+                    class="card-icon-img"></div>
+                <div class="other-city-details">
+                    <h4 class="temp-section"><span class="temp-main">13</span>&deg;C</h4>
+                    <h4 class="condition">rain</h4>
+                </div>
+            </div>
+        </div>
+        <div class="part2-current-weather">
+            <div class="high-low-temp">
+
+                <h4 id="card-name">Temprature</h4>
+                <div class="temp-part">
+                    <h4 class="feels-like">feels like <span class="feels-input"></span></h4>
+                </div>
+                <div class="temp-part" id="temp-details">
+                    <div class="high-part" id="all-same-arrow">
+                        <img src="img/arrow_top_icon.png" class="arrow">
+                        <div class="high-input" id="arrow-input"></div>
+                    </div>
+                    <div class="low-part" id="all-same-arrow">
+                        <img src="img/arrow_down_icon.png" class="arrow">
+                        <div class="down-input" id="arrow-input"></div>
+                    </div>
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="other-details-weather">
+                <div class="part1-section-other-weather">
+                    <div class="part1-section-other-in-weather">
+                        <h4 class="section-other-in-weather-name">Huminity</h4>
+                        <h4 class="section-other-in-weather-name">Deg</h4>
+                    </div>
+                    <div class="part2-section-other-in-weather">
+                        <h4 class="section-other-in-weather-ans">gust</h4>
+                        <h4 class="section-other-in-weather-ans">speed</h4>
+                    </div>
+                </div>
+                <div class="part1-section-other-weather">
+                    <div class="part1-section-other-in-weather">
+                        <h4 class="section-other-in-weather-name">Gust</h4>
+                        <h4 class="section-other-in-weather-name">Speed</h4>
+                    </div>
+                    <div class="part2-section-other-in-weather">
+                        <h4 class="section-other-in-weather-ans">deg</h4>
+                        <h4 class="section-other-in-weather-ans">deg</h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="other-details">
+
+        <div class="uv-card" id="other-detail-card">
+            <div class="card-details">
+                <h4 id="card-name">UV Index</h4>
+                <h1 class="uv-input" id="uv-input-name"></h1>
+                <div class="uv-condition"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+    <section class="part">
+
+        <div class="forecast-data" id="main-forecast-data">
+
+            <h2 class="forecast-data-title" id="data-title-1"></h2>
+            <div class="days-forecast" id="in-part-forecast-data">
+
+
+
+                <div class="today-card" id="card">
+                    <div class="in-card-details">
+                        <p class="today-card-time-9" id="forecast-card-time">9:00 AM</p>
+                        <div class="today-card-icon-9" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="today-card-con-temp">
+                            <p class="today-temperature-9" id="forecast-card-temp"></p>
+                            <p class="today-card-condition-9" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="today-card" id="card">
+                    <div class="in-card-details">
+                        <p class="today-card-time-12" id="forecast-card-time">12:00 AM</p>
+                        <div class="today-card-icon-12" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="today-card-con-temp">
+                            <p class="today-temperature-12" id="forecast-card-temp"></p>
+                            <p class="today-card-condition-12" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="today-card" id="card">
+                    <div class="in-card-details">
+                        <p class="today-card-time-15" id="forecast-card-time">3:00 PM</p>
+                        <div class="today-card-icon-15" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="today-card-con-temp">
+                            <p class="today-temperature-15" id="forecast-card-temp"></p>
+                            <p class="today-card-condition-15" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="today-card" id="card">
+                    <div class="in-card-details">
+                        <p class="today-card-time-18" id="forecast-card-time">6:00 PM</p>
+                        <div class="today-card-icon-18" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="today-card-con-temp">
+                            <p class="today-temperature-18" id="forecast-card-temp"></p>
+                            <p class="today-card-condition-18" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="today-card" id="card">
+                    <div class="in-card-details">
+                        <p class="today-card-time-21" id="forecast-card-time">9:00 PM</p>
+                        <div class="today-card-icon-21" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="today-card-con-temp">
+                            <p class="today-temperature-21" id="forecast-card-temp"></p>
+                            <p class="today-card-condition-21" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="all-day-forecast-data" id="main-forecast-data">
+
+            <h2 class="forecast-data-title" id="data-title-2"></h2>
+            <div class="all-days-forecast" id="in-part-forecast-data">
+
+
+
+                <div class="daily-card" id="card">
+                    <div class="in-card-details">
+                        <p class="daily-card-time-9" id="forecast-card-time">9:00 AM</p>
+                        <div class="daily-card-icon-9" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="daily-card-con-temp">
+                            <p class="daily-temperature-9" id="forecast-card-temp"></p>
+                            <p class="daily-card-condition-9" id="tforecast-cardcondition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-card" id="card">
+                    <div class="in-card-details">
+                        <p class="daily-card-time-12" id="forecast-card-time">12:00 AM</p>
+                        <div class="daily-card-icon-12" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="daily-card-con-temp">
+                            <p class="daily-temperature-12" id="forecast-card-temp"></p>
+                            <p class="daily-card-condition-12" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-card" id="card">
+                    <div class="in-card-details">
+                        <p class="daily-card-time-15" id="forecast-card-time">3:00 PM</p>
+                        <div class="daily-card-icon-15" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="daily-card-con-temp">
+                            <p class="daily-temperature-15" id="forecast-card-temp"></p>
+                            <p class="daily-card-condition-15" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-card" id="card">
+                    <div class="in-card-details">
+                        <p class="daily-card-time-18" id="forecast-card-time">6:00 PM</p>
+                        <div class="daily-card-icon-18" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="daily-card-con-temp">
+                            <p class="daily-temperature-18" id="forecast-card-temp"></p>
+                            <p class="daily-card-condition-18" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-card" id="card">
+                    <div class="in-card-details">
+                        <p class="daily-card-time-21" id="forecast-card-time">9:00 PM</p>
+                        <div class="daily-card-icon-21" id="forecast-card-icon"><img src=""
+                                class="card-icon-img"><span>Forecast condition</span></div>
+                        <div class="daily-card-con-temp">
+                            <p class="daily-temperature-21" id="forecast-card-temp"></p>
+                            <p class="daily-card-condition-21" id="forecast-card-condition"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"
+            integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://kit.fontawesome.com/ccefff6d75.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

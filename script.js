@@ -35,6 +35,24 @@ const getWeatherDetails = (cityName, lat, lon) => {
       ).innerHTML = `<img src="https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@4x.png" class="weather-icon-main">`;
       
       
+
+      document.querySelector(".section-other-in-humidity-ans").innerHTML =
+      weather.list[0].main.humidity;
+
+      document.querySelector(".section-other-in-deg-ans").innerHTML =
+      weather.list[0].wind.deg;
+
+      document.querySelector(".section-other-in-gust-ans").innerHTML =
+      weather.list[0].wind.gust;
+
+      document.querySelector(".section-other-in-speed-ans").innerHTML =
+      weather.list[0].wind.speed;
+
+
+
+
+
+
       
       document.querySelector(
         ".today-card-icon-9"
@@ -75,6 +93,62 @@ const getWeatherDetails = (cityName, lat, lon) => {
         weather.list[4].weather[0].main;
       document.querySelector(".today-temperature-21").innerHTML =
         Math.round(weather.list[4].main.temp) - 273 + " &deg;c";
+
+
+
+
+
+
+
+      document.querySelector(
+        ".daily-card-icon-9"
+      ).innerHTML = `<img src="https://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@4x.png" class="weather-icon">`;
+      document.querySelector(".daily-card-condition-9").innerHTML =
+        weather.list[0].weather[0].main;
+      document.querySelector(".daily-temperature-9").innerHTML =
+        Math.round(weather.list[0].main.temp) - 273 + " &deg;c";
+      document.querySelector(".daily-card-date-9").innerHTML =
+        weather.list[0].dt_txt.split(" ")[0];
+
+      document.querySelector(
+        ".daily-card-icon-12"
+      ).innerHTML = `<img src="https://openweathermap.org/img/wn/${weather.list[8].weather[0].icon}@4x.png" class="weather-icon">`;
+      document.querySelector(".daily-card-condition-12").innerHTML =
+        weather.list[8].weather[0].main;
+      document.querySelector(".daily-temperature-12").innerHTML =
+        Math.round(weather.list[8].main.temp) - 273 + " &deg;c";
+      document.querySelector(".daily-card-date-12").innerHTML =
+        weather.list[8].dt_txt.split(" ")[0];
+
+      document.querySelector(
+        ".daily-card-icon-15"
+      ).innerHTML = `<img src="https://openweathermap.org/img/wn/${weather.list[16].weather[0].icon}@4x.png" class="weather-icon">`;
+      document.querySelector(".daily-card-condition-15").innerHTML =
+        weather.list[16].weather[0].main;
+      document.querySelector(".daily-temperature-15").innerHTML =
+        Math.round(weather.list[16].main.temp) - 273 + " &deg;c";
+      document.querySelector(".daily-card-date-15").innerHTML =
+        weather.list[16].dt_txt.split(" ")[0];
+
+      document.querySelector(
+        ".daily-card-icon-18"
+      ).innerHTML = `<img src="https://openweathermap.org/img/wn/${weather.list[24].weather[0].icon}@4x.png" class="weather-icon">`;
+      document.querySelector(".daily-card-condition-18").innerHTML =
+        weather.list[24].weather[0].main;
+      document.querySelector(".daily-temperature-18").innerHTML =
+        Math.round(weather.list[24].main.temp) - 273 + " &deg;c";
+      document.querySelector(".daily-card-date-18").innerHTML =
+        weather.list[24].dt_txt.split(" ")[0];
+
+      document.querySelector(
+        ".daily-card-icon-21"
+      ).innerHTML = `<img src="https://openweathermap.org/img/wn/${weather.list[32].weather[0].icon}@4x.png" class="weather-icon">`;
+      document.querySelector(".daily-card-condition-21").innerHTML =
+        weather.list[32].weather[0].main;
+      document.querySelector(".daily-temperature-21").innerHTML =
+        Math.round(weather.list[32].main.temp) - 273 + " &deg;c";
+      document.querySelector(".daily-card-date-21").innerHTML =
+        weather.list[32].dt_txt.split(" ")[0];
     })
     .catch(() => {
       alert("An error occurred while fetching the forecast");
